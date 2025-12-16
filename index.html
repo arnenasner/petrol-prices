@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="robots" content="noindex, nofollow" />
+		<link rel="stylesheet" href="/node_modules/leaflet/dist/leaflet.css" />
+		<link rel="stylesheet" href="css/style.css" />
+		<link rel="icon" href="icons/favicon.svg" />
+		<script src="/node_modules/leaflet/dist/leaflet.js" defer type="module"></script>
+		<script src="js/script.js" defer type="module"></script>
+		<title>Tanken</title>
+	</head>
+	<body>
+		<div class="container">
+			<header class="header">
+				<div class="header_heading">
+					<img src="icons/logo.svg" alt="Logo" class="header__logo" />
+
+					<h1>Tanken</h1>
+					<span>Daten von <a href="https://tankerkoenig.de/" target="_blank">www.tankerkoenig.de</a></span>
+				</div>
+				<div class="header_info">
+					<img src="icons/location_denied.png" alt="Standort Abfrage nicht erlaubt Icon" class="location_denied_logo" />
+					<img src="icons/location.png" alt="Standort Abfrage erlaubt Icon" class="location_logo" />
+				</div>
+				<div class="header_search">
+					<form class="search">
+						<input type="search" name="search" class="search__input" placeholder="Suchen nach PLZ..." autofocus />
+						<button class="btn search__btn">
+							<img src="icons/magnifying-glass.svg" alt="Magnifying Glass Icon" />
+						</button>
+					</form>
+				</div>
+			</header>
+
+			<section class="info"></section>
+
+			<section class="avg">
+				<span>Aktuelle Durchschnittspreise</span>
+				<ul class="avgPrices"></ul>
+			</section>
+
+			<section class="cards"></section>
+
+			<div id="map"></div>
+		</div>
+		<div class="spinner-overlay" style="display: none">
+			<div class="spinner"></div>
+		</div>
+	</body>
+</html>

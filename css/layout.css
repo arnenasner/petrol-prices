@@ -1,0 +1,39 @@
+.container {
+	display: grid;
+	grid-template-columns: 50rem 1fr 1fr;
+	grid-template-rows: 10rem min-content 1fr;
+	margin: 3.8rem;
+	border-radius: 7px;
+	box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+	overflow: hidden;
+}
+
+.header {
+	grid-column: 1 / 4;
+	grid-row: 1 / 2;
+}
+
+.avg {
+	grid-column: 1 / 2;
+	grid-row: 2 / 3;
+}
+
+.info {
+	grid-column: 2 / 4;
+	grid-row: 2 / 3;
+	justify-self: center;
+	align-self: center;
+	text-align: center;
+}
+
+.cards {
+	grid-column: 1 / 2;
+	grid-row: 3 / -1;
+	height: calc(100vh - 29rem);
+}
+
+#map {
+	z-index: 1;
+	grid-column: 1 / -1;
+	grid-row: 2 / -1;
+}
